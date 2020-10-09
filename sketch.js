@@ -4,7 +4,7 @@ const  Events = Matter.Events;
 const  Bodies = Matter.Bodies;
  
 var particles = [];
-var Particles;
+var particle;
 var plinkos = [];
 var divisions = [];
 
@@ -16,12 +16,16 @@ var count = 0;
 
 var gameState = "start";
 var boundary;
+var invisibleGround;
+invisibleGround.visible = false;
+
 function setup() {
   createCanvas(800, 800);
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
   boundary = createSprite(400,450,800,20);
+ invisibleGround = createSprite(width/2,height,width,20);
 
    for (var k = 0; k <=width; k = k + 80) {
      divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
