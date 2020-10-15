@@ -16,8 +16,8 @@ var count = 0;
 
 var gameState = "start";
 var boundary;
-var invisibleGround;
-invisibleGround.visible = false;
+//var invisibleGround;
+//invisibleGround.visible = false;
 
 function setup() {
   createCanvas(800, 800);
@@ -25,7 +25,7 @@ function setup() {
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
   boundary = createSprite(400,450,800,20);
- invisibleGround = createSprite(width/2,height,width,20);
+ //invisibleGround = createSprite(width/2,height,width,20);
 
    for (var k = 0; k <=width; k = k + 80) {
      divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
