@@ -30,6 +30,7 @@ class Particle {
        pop();
        }
         else{
+            score = score +50;
         World.remove(world , this.body);
         push();
         this.Visiblity = this.Visiblity - 5;
